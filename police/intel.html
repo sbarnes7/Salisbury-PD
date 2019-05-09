@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #003366;
+  color: white;
+}
+a{
+color: white;
+}
+tr:hover{
+    background-color: white;
+    color: black;
+}
+a:hover{
+  color: blue;
+}
+tr:hover a { color: blue; }
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #3878B9;
+  overflow-x: hidden;
+  padding-top: 20px;
+  
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #f1f1f1;
+}
+
+/* Main content */
+.main {
+  margin-left: 230px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #003366;
+  color: white;
+}
+table{
+  width: 100%;
+}
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body onload="startTime()">
+
+<div class="sidenav">
+  <a href="index.html">Home</a>
+  <a href="crime.html">Current Warrants</a>
+  <a href="releases.html">Recent Jail Releases</a>
+  <a href="calendar.html">Calendar</a>
+  <a href="documents.html">Documents</a>
+  <a href="criminalSearch.html">Criminal Search</a>
+  <button class="dropdown-btn">Roll Call 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="xpc.html">XPC</a>
+    <a href="vehicles.html">Stolen Vehicles</a>
+    <a href="missing.html">Missing Persons</a>
+    <a href="intel.html">Intel</a>
+    <a href="memos.html">Memos</a>
+    <a href="vacancies.html">Vacant Dwelling</a>
+    <a href="personnel.html">Personnel Orders</a>
+    <a href="bulletin.html">Training Bulletins</a>
+  </div>
+</div>
+
+<div class="main">
+  <nav class="navbar ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" width="45%" height="50" alt="">
+      </a>
+      <a href="xpc.html">XPC</a>&emsp;&emsp;
+      <a href="vehicles.html">Stolen Vehicles</a>&emsp;&emsp;
+      <a href="missing.html">Missing Persons</a>&emsp;&emsp;
+      <a href="intel.html">Intel</a>&emsp;&emsp;
+      <a href="memos.html">Memos</a>&emsp;&emsp;
+      <a href="vacancies.html">Vacant Dwelling</a>&emsp;&emsp;
+      <a href="personnel.html">Personnel Orders</a>&emsp;&emsp;
+      <a href="bulletin.html">Training Bulletins</a>&emsp;&emsp;
+  <div class="text text-right">
+      <div id="txt"></div>
+  
+  </div>
+
+    </div>
+  </nav>
+               <div class= "text text-center">
+                <h1>Intel</h1><br>
+                </div>
+                
+                <!--
+                  <php?
+                  $connection = new mysqli('localhost', 'user', 'pass', 'dbname');
+                        $currentDate =date('m/d/Y');
+                        $query = "DELETE FROM Intel WHERE '$currentDate' > expirationDate";
+                        if($connection->query($query)==TRUE){
+                          echo 'All expirations removed';
+                        }
+                  $query = "SELECT *
+                  FROM Intel";
+                  if($connection->query($query) == TRUE)//if the query is valid enter the if statement
+{
+        $result = $connection->query($query);//store the result of the query
+  $numresults=$result->num_rows;//access the num_rows attribute of the result object
+   echo '<table class="table">
+                <thead class="thead-dark">
+                        <tr>
+                                <th>Date</th>
+                                <th>Title</th>
+                                <th>Attachment</th>
+                                <th>Expiration Date</th>
+                        </tr></thead>';
+                   for ($i=0; $i < $numresults; $i++)//iterate over each row in result
+        {
+        
+        $row = $result->fetch_object();//calls member function of result to get row data
+              echo '<td>';
+                         echo $row->date;
+                         echo '</td><td>';
+                           echo $row->title;
+                           echo '</td><td>';
+                         echo $row->attachment;
+                         echo '</td><td>';
+			 echo $row->expirationDate;
+       echo '</td></tr></tbody></table>';
+                         }
+                         ?>
+                -->
+
+
+
+
+                <h3><a href="intelUpdate.html">Update Intel</a></h3><br>
+                <table class="table table-dark">
+                        <thead>
+                          <tr>
+                            <th scope="col">Date</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Attachment</th>
+                            <th scope="col">Expiration Date</th>
+                      
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1/2/19</th>
+                            <td>Oregon Robbery</td>
+                            <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                             <td>2/2/19</td>
+                      
+                          </tr>
+                          <tr>
+                              <th scope="row">1/2/19</th>
+                              <td>Oregon Robbery</td>
+                              <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                               <td>2/2/19</td>
+                        
+                            </tr>
+                            <tr>
+                                <th scope="row">1/2/19</th>
+                                <td>Oregon Robbery</td>
+                                <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                                 <td>2/2/19</td>
+                          
+                              </tr>
+                              <tr>
+                                  <th scope="row">1/2/19</th>
+                                  <td>Oregon Robbery</td>
+                                  <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                                   <td>2/2/19</td>
+                            
+                                </tr>
+                                <tr>
+                                    <th scope="row">1/2/19</th>
+                                    <td>Oregon Robbery</td>
+                                    <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                                     <td>2/2/19</td>
+                              
+                                  </tr>
+                                  <tr>
+                                      <th scope="row">1/2/19</th>
+                                      <td>Oregon Robbery</td>
+                                      <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                                       <td>2/2/19</td>
+                                
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1/2/19</th>
+                                        <td>Oregon Robbery</td>
+                                        <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                                         <td>2/2/19</td>
+                                  
+                                      </tr>
+                                      <tr>
+                                          <th scope="row">1/2/19</th>
+                                          <td>Oregon Robbery</td>
+                                          <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                                           <td>2/2/19</td>
+                                    
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">1/2/19</th>
+                                            <td>Oregon Robbery</td>
+                                            <td><a href="https://www.nbcnews.com/news/us-news/oregon-officer-catches-man-trying-steal-bike-outside-police-department-n953741">Click Here</a></td>
+                                             <td>2/2/19</td>
+                                      
+                                          </tr>
+                         
+                        </tbody>
+                      </table>
+                    
+            </div>
+                  </div></div>
+          
+ 
+</div>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+function startTime() {
+      var today = new Date();
+      var h = today.getHours();
+      var m = today.getMinutes();
+      var s = today.getSeconds();
+      m = checkTime(m);
+      s = checkTime(s);
+      document.getElementById('txt').innerHTML =
+      h + ":" + m + ":" + s;
+      var t = setTimeout(startTime, 500);
+    }
+    function checkTime(i) {
+      if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+      return i;
+    }
+</script>
+
+</body>
+
+</html> 

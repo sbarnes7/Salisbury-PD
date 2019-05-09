@@ -1,0 +1,209 @@
+<html>
+    <head>
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    </head>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <style>
+.container{
+    width: 100%;
+}
+html, body{
+    background-color: #003366;
+    color: white;
+}
+a{
+    color: white;
+}
+.jumbotron{
+    background-color: #3878B9;
+
+}
+.navbar{
+    background-color: #3878B9;
+    color: white;
+}
+.container{
+    width: 85%;
+}
+.container1{
+    width: 95%;
+    padding: 1%;
+}
+tr:hover{
+    background-color: white;
+    color: black;
+}
+tr:hover a { color: blue; }
+
+    </style>
+    <script>
+
+    </script>
+    <body>
+            <nav class="navbar sticky-top navbar-expand-lg ">
+                    <img src="logo.png" style="height: 7%; width:5%;">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                      <ul class="navbar-nav">
+                        <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="crime.html">Top 10</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="releases.html">Recent Jail Releases</a>
+                        </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="calendar.html">Calendar</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" href="documents.html">Documents</a>
+                              </li>
+                              <li class="nav-item">
+                                    <a class="nav-link" href="criminalSearch.html">Criminal Search</a>
+                                  </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Roll Call
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="xpc.html">XPC</a>
+                            <a class="dropdown-item" href="vehicles.html">Stolen Vehicles</a>
+                            <a class="dropdown-item" href="missing.html">Missing Persons</a>
+                            <a class="dropdown-item" href="intel.html">Intel</a>
+                            <a class="dropdown-item" href="memos.html">Memos</a>
+                            <a class="dropdown-item" href="vacancies.html">Vacant Dwelling</a>
+                            <a class="dropdown-item" href="personnel.html">Personnel Orders</a>
+                            <a class="dropdown-item" href="bulletin.html">Training Bulletins</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                  <div class="jumbotron jumbotron-fluid">
+                        <div class="container">
+                          <h1 class="display-4">Salisbury Police Department</h1>
+                          <p class="lead">Salisbury, MD 21804</p><a href="add.html">Add Criminal</a>&emsp;<a href="update.html">Update Criminal</a>&emsp;<a href="delete.html">Delete Criminal</a>
+                      </div></div>
+                      <div class="container1">
+                    <div class="row">
+                        <div class="col-sm-2">
+
+                        </div>
+                        <div class="col-sm-8">
+                                <h1>Salisbury's Top 10 Most Wanted</h1><br>
+
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">YID</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Last Name</th>
+                                    <th scope="col">DOB</th>
+                                    <th scope="col">Crime</th>
+                                    <th scope="col">Address</th>  
+                                    <th scope="col">Offense Date</th>
+                                    <th scope="col">Mug Shot</th>    
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                 
+                                <tr>
+                                        <th scope="row">123456</th>
+                                        <td>Robert</td>
+                                        <td>Bobbert</td>
+                                        <td>09/05/1988</td>
+                                        <td>Murder</td>
+                                        <td>1101 Camden Ave.</td>
+                                        <td>10/27/2018</td>
+                                        <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                    </tr>          <tr>
+                                            <th scope="row">123456</th>
+                                            <td>Robert</td>
+                                            <td>Bobbert</td>
+                                            <td>09/05/1988</td>
+                                            <td>Murder</td>
+                                            <td>1101 Camden Ave.</td>
+                                            <td>10/27/2018</td>
+                                            <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                        </tr>          <tr>
+                                                <th scope="row">123456</th>
+                                                <td>Robert</td>
+                                                <td>Bobbert</td>
+                                                <td>09/05/1988</td>
+                                                <td>Murder</td>
+                                                <td>1101 Camden Ave.</td>
+                                                <td>10/27/2018</td>
+                                                <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                            </tr>          <tr>
+                                                    <th scope="row">123456</th>
+                                                    <td>Robert</td>
+                                                    <td>Bobbert</td>
+                                                    <td>09/05/1988</td>
+                                                    <td>Murder</td>
+                                                    <td>1101 Camden Ave.</td>
+                                                    <td>10/27/2018</td>
+                                                    <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                                </tr>          <tr>
+                                                        <th scope="row">123456</th>
+                                                        <td>Robert</td>
+                                                        <td>Bobbert</td>
+                                                        <td>09/05/1988</td>
+                                                        <td>Murder</td>
+                                                        <td>1101 Camden Ave.</td>
+                                                        <td>10/27/2018</td>
+                                                        <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                                    </tr>          <tr>
+                                                            <th scope="row">123456</th>
+                                                            <td>Robert</td>
+                                                            <td>Bobbert</td>
+                                                            <td>09/05/1988</td>
+                                                            <td>Murder</td>
+                                                            <td>1101 Camden Ave.</td>
+                                                            <td>10/27/2018</td>
+                                                            <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                                        </tr>          <tr>
+                                                                <th scope="row">123456</th>
+                                                                <td>Robert</td>
+                                                                <td>Bobbert</td>
+                                                                <td>09/05/1988</td>
+                                                                <td>Murder</td>
+                                                                <td>1101 Camden Ave.</td>
+                                                                <td>10/27/2018</td>
+                                                                <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th scope="row">123456</th>
+                                                                <td>Robert</td>
+                                                                <td>Bobbert</td>
+                                                                <td>09/05/1988</td>
+                                                                <td>Murder</td>
+                                                                <td>1101 Camden Ave.</td>
+                                                                <td>10/27/2018</td>
+                                                                <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                                            </tr>    <tr>
+                                                                <th scope="row">123456</th>
+                                                                <td>Robert</td>
+                                                                <td>Bobbert</td>
+                                                                <td>09/05/1988</td>
+                                                                <td>Murder</td>
+                                                                <td>1101 Camden Ave.</td>
+                                                                <td>10/27/2018</td>
+                                                                <td><img src="criminal.jpg" alt="Girl in a jacket" style="width:40%;height:35%;"></td>
+                                                            </tr>
+                                 
+                                </tbody>
+                              </table>
+                        </div>
+                        <div class="col-sm-2">
+
+                        </div>
+                    </div> 
+                    </div>
+    </body>
+</html>

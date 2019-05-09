@@ -1,0 +1,159 @@
+<html>
+<head>
+<title>SPD</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style>
+body{
+background-color: #003366;
+color: white;
+}
+a{
+color: white;
+}
+.container{
+width: 95%;
+}
+table{
+background-color: #3878B9;
+}
+footer{
+background-color: black;
+text-align: center;
+}
+jumbotron{
+background-color: primary;
+}
+</style>
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+
+</script>
+<body onload="startTime()">
+<nav class="navbar ">
+  <div class="container-fluid">
+  <a class="navbar-brand" href="#">
+    <img src="logo.png" alt="Logo" style="width:60px;height:60px;">
+  </a>
+<a href="add.html">Add Criminal</a>&emsp;&emsp;
+<a href="update.html">Update Criminal</a>&emsp;&emsp;
+<a href="delete.html">Delete Criminal</a>
+<div class="text-center">
+  <div id="txt"></div>
+</div>
+<div class="text text-right">
+Hello $user
+</div>
+  </div>
+</nav>
+<!--keeps everything lined up in the middle of the page-->
+<div class="container">
+<div class="row">
+<div class="col-sm-2"style="background-color: #3878B9  ; height: 102%;">
+<div class="nav nav-dark bg-primary">
+    <ul class="nav flex-column">
+        <li class="nav-item">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="crime.html">Top 10</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="releases.html">Recent Jail Releases</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="calendar.html">Calendar</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="documents.html">Documents</a>
+        </li>
+        <li class="nav-item">
+              <a class="nav-link" href="criminalSearch.html">Criminal Search</a>
+            </li>
+        <li class="nav-item">
+              <a class="nav-link" href="rollCall.html">Roll Call</a>
+            </li>
+      </ul>
+</div>
+</div>
+<div class="col-sm-10">
+<div class= "text text-center">
+<h1>Personnel Update</h1><br><br>
+</div>
+
+
+<div class="col-sm-6">
+<h4>Add Personnel</h4>
+<form>
+    <label for="example-date-input" class="col-2 col-form-label">Date</label>
+    
+      <input class="form-control" type="date" value="2017-08-19" id="example-date-input">
+     <br> <label for="exampleFormControlFile1">Choose PDF</label>
+      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  <br>
+
+
+      <label for="example-date-input" class="col-2 col-form-label"> Expiration Date</label>
+    
+      <input class="form-control" type="date" value="2017-08-19" id="example-date-input">
+  
+     
+   <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  <br>
+  
+</form>
+</div>
+<div class="col-sm-6">
+  <h4>Remove Personnel</h4>
+  <br> <label for="exampleFormControlFile1">Choose PDF</label>
+  <input type="file" class="form-control-file" id="exampleFormControlFile1">
+<br>
+<button type="submit" class="btn btn-primary">Submit</button>
+
+</div>
+
+
+
+
+
+
+
+</div>
+</div>
+<br>
+
+
+
+
+</div>
+<!--ends the container div-->
+</div>
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Salisbury Police Department<br>699 W Salisbury Pkwy, Salisbury, MD 21801<br>(410) 548-3165</p>
+      </div>
+    </footer>
+</body>
+</html>
